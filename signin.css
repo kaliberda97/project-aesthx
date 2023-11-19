@@ -95,9 +95,8 @@ header {
   .navbar .login-btn:hover {
 	background: rgb(247, 177, 1);
   }
-  /* ------------------------------------------------------ */
-section 
-{
+  /* -------------------------------- quadrants ---------------------- */
+section {
 	
 	position: absolute;
 	width: 100vw;
@@ -156,8 +155,8 @@ section span:hover {
 section .signin
 {
 	position: absolute;
-	width: 500px;
- 	height: 500px;
+	width: 400px;
+ 	height: 400px;
   	background: rgb(27, 27, 28);  
 	z-index: 1000;
 	display: flex;
@@ -179,7 +178,7 @@ section .signin .content
 }
 section .signin .content h2 
 {
-	font-size: 3em;
+	font-size: 2em;
 	color: rgb(255, 153, 0);
 	text-transform: uppercase;
 }
@@ -244,13 +243,19 @@ section .signin .content .form .inputBox i
 }
 .signin .content .form .inputBox input[type="submit"]
 {
-	padding: 20px;
+	padding: 4px 16px;
 	background: rgb(255, 196, 0);
 	color: rgb(0, 0, 0);
 	font-weight: 600;
-	font-size: 1.5em;
-	letter-spacing: 0.2em;
+	font-size: 1.2em;
+	letter-spacing: 0.1em;
 	cursor: pointer;
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	
 }
 input[type="submit"]:active
 {
@@ -284,6 +289,7 @@ footer {
     position: fixed;
     bottom: 0;
 	z-index: 2;
+	font-size: 10px;
   }
   
   .social-icons {
@@ -291,7 +297,7 @@ footer {
   }
   
   .social-icons i {
-	font-size: 30px;
+	font-size: 20px;
 	margin: 0 10px;
 	color: rgb(197, 197, 197);
 	transition: color 0.3s ease-in-out;

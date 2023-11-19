@@ -18,6 +18,7 @@ body {
   background-position: center;
   height: 100vh;
   width: 100%;
+  background-repeat: no-repeat;
 }
 /* ---------------------- nav ----------------------- */
 header {
@@ -102,11 +103,11 @@ header {
 }
 /* ---------------------- calendar  ----------------------- */
 .calendar {
-  position: relative;
-  width: 280px;
-  height:350px;
+  position: absolute;
+  margin-top: 13%;
+  width: 200px;
+  height: 220px;
   margin-bottom: 10px; 
-  margin-top: 10%;
   background: rgb(255, 255, 255);
   text-align: center;
   border-radius: 8px;
@@ -116,14 +117,14 @@ header {
 
 .calendar #monthName {
   position: relative;
-  padding: 25px 20px;
+  padding: 10px 20px;
   background: #ab9c85;
   color: #fff;
-  font-size: 30px;
+  font-size: 15px;
 }
 
 .calendar #dayName {
-  margin: 20px;
+  margin: 10px;
   font-size: 20px;
   font-weight: 300;
   color: #464646;
@@ -131,15 +132,16 @@ header {
 
 .calendar #dayNumber {
   margin: 0;
-  line-height: 1em;
-  font-size: 80px;
+  line-height: 0.9em;
+  font-size: 40px;
   font-weight: 700;
   color: #3d3d3d;
 }
 
 .calendar #year {
-  margin-bottom: 20px;
-  font-size: 20px;
+  margin-bottom: -18px;
+  margin-top: 5px;
+  font-size: 15px;
   font-weight: 700;
   color: rgb(108, 108, 108);
 }
@@ -148,12 +150,12 @@ button {
   background-color:rgb(255, 200, 0);
   color: rgb(0, 0, 0);
   border: none;
-  padding: 10px 15px;
+  padding: 5px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 5px 2px;
+  font-size: 14px;
+  margin: 25px 2px;
   cursor: pointer;
   border-radius: 4px;
   
@@ -162,17 +164,18 @@ button {
 button:hover {
   background-color: #06ad17;
 }
-
+/* ---------------------- main form ----------------------- */
 form {
-  margin-top: 20px;
+  position: relative;
+  margin-top: 120%;
   text-align: left;
-  max-width: 400px; 
-  width: 100%;
+  max-width: 350px; 
+  width: 80%;
 
 }
 
 .form-container {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
   margin-left: 40px; 
   text-align: left;
@@ -183,9 +186,10 @@ form {
 
 label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom:3px;
   color:  rgb(247, 161, 1);
-  font-size: 20px;
+  font-size: 14px;
+
 }
 
 input,
@@ -195,24 +199,25 @@ textarea {
   margin-bottom: 16px;
   box-sizing: border-box;
   border-radius: 10px;
+
 }
 
 textarea {
-  height: 100px;
+  height: 60px;
 }
 
-
 #appointmentType {
-  font-size: 20px;
+  font-size: 12px;
 }
 /* ----------------------------------- footer ----------------------------------- */
 footer {
   background-color: #3d3c3c;
-  padding: 20px 0;
+  padding: 5px 0;
   text-align: center;
   color: rgb(158, 158, 158);
   width: 100%;
   margin-top: auto;
+  font-size: 10px;
   
 }
 
@@ -221,7 +226,7 @@ footer {
 }
 
 .social-icons i {
-  font-size: 30px;
+  font-size: 20px;
   margin: 0 10px;
   color: rgb(165, 162, 162);
   transition: color 0.3s ease-in-out;
@@ -236,4 +241,10 @@ footer {
 .follow-us {
   margin-bottom: 10px;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
 }

@@ -124,30 +124,22 @@ body {
 }
 
 /* -------------------------------------------- banner ------------------------------------------ */
-.banner_image{
-	width: 100%;
-	height: 600px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 .banner_content{
 	text-align: center;
 	color: #fff;
 }
 
 .banner_content h1{
-  font-size: 40px;
-	text-transform: uppercase;
-	line-height: 38px;
-	margin-top: 20%;
+  font-size: 25px;
+  text-transform: uppercase;
+  line-height: 30px;
+  margin-top: 10%;
  
 }
 
 .banner_content h1 span{
-	color: #fba822;;
-  font-size: 30px;
+  color: #fba822;;
+  font-size: 21px;
   letter-spacing: 5px;
   text-transform: lowercase;
 }
@@ -160,25 +152,26 @@ body {
 .services,
 .contactus,
 .ourteam{
-	padding: 5% 10%;
+	padding: 3% 1%;
 	text-align: center;
 	
   
 }
 p{
-	margin-bottom: 15px;
-	font-size: 20px;
+	margin-bottom: 5px;
+	font-size: 13px;
 	line-height: 20px;
 	color: #a9a9a9;
     font-family: "Open Sans", sans-serif;
 }
 h1.title{
-	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 	color: #aea0a0;
 	font-family: "Open Sans", sans-serif;
 	text-transform: uppercase;
-	font-size: 48px;
-	word-spacing: 10px;
+	font-size: 20px;
+	word-spacing: 5px;
 	letter-spacing: 5px;
 
 }
@@ -190,16 +183,16 @@ h1.title{
 	border: 2px solid #f8b930;
   	border-radius: 20px;
   	background-color: #f8b930;
-	line-height: 35px;
+	line-height: 30px;
 	margin: 25px auto 0;
 	color: #000000;
 	text-align: center;
   	text-decoration: none;
-  	font-size: 20px;
+  	font-size: 15px;
 }
 /* -------------------------------------------- service ------------------------------------------ */
 .services{
-	background: #f5f5f5;
+	background: #1e1e1e;
 }
 
 .diff_services{
@@ -213,14 +206,14 @@ h1.title{
 }
 
 .diff_service_item img{
-	width: 100%;
- 	height: 75%;
-	margin-bottom: 25px;
+	width: 90%;
+ 	height: 70%;
+	margin-bottom: 2px;
 }
 
 .diff_service_item h3{
 	color: #fba822;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 }
 
 /* ------------------------------------------- contact us ------------------------------------------- */
@@ -230,7 +223,7 @@ h1.title{
 }
 
 .form_input input[type="text"]{
-	width: 250px;
+	width: 280px;
 	padding: 12px 20px;
 	border: 1px solid #ccc;
   	border-radius: 20px;
@@ -238,21 +231,24 @@ h1.title{
 }
 
 .form_input textarea{
-	width: 250px;
+	width: 280px;
 	padding: 12px 20px;
 	height: 80px;
 	resize: none;
-	border: 1px solid rgb(73, 73, 73);
+	border: 1px solid #ccc;
   	border-radius: 20px;
 }
 
 .contactus {
-	background-color: #212020;
+	background-color: #efefef;
+	width: 100%;
+
 }
 
 /* --------------------------------------------- team ----------------------------------------- */
 .ourteam{
-	background: #f5f5f5;
+	background: #282828;
+
 }
 
 .ourteam_wrapper .team{
@@ -272,8 +268,9 @@ h1.title{
 }
 
 .ourteam_wrapper .team_member img{
+	margin-top: 10%;
 	width: 100%;
-  	height: 80%;
+  	height: 60%;
   	object-fit: cover;
 	display: block;
 	transition: all 0.5s ease;
@@ -289,11 +286,12 @@ h1.title{
 /* ----------------------------------- footer ----------------------------------- */
 footer {
 	background-color: #3d3c3c;
-	padding: 20px 0;
+	padding: 5px 0;
 	text-align: center;
 	color: rgb(221, 217, 217);
 	width: 100%;
 	margin-top: auto;
+	font-size: 10px;
 	
   }
   
@@ -302,7 +300,7 @@ footer {
   }
   
   .social-icons i {
-	font-size: 30px;
+	font-size: 20px;
 	margin: 0 10px;
 	color: rgb(197, 197, 197);
 	transition: color 0.3s ease-in-out;
