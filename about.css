@@ -59,7 +59,7 @@ body {
   color: rgb(255, 255, 255);
   text-shadow: 10px 10px 20px rgb(186, 162, 126);
   font-weight: 600;
-  font-size: 80px;
+  font-size: 68px;
 }
 
 .navbar .links {
@@ -167,7 +167,7 @@ p{
 h1.title{
 	margin-top: 20px;
 	margin-bottom: 10px;
-	color: #aea0a0;
+	color: #888888;
 	font-family: "Open Sans", sans-serif;
 	text-transform: uppercase;
 	font-size: 20px;
@@ -192,7 +192,7 @@ h1.title{
 }
 /* -------------------------------------------- service ------------------------------------------ */
 .services{
-	background: #1e1e1e;
+	background: #1a1a1a;
 }
 
 .diff_services{
@@ -257,7 +257,7 @@ h1.title{
 }
 
 .ourteam_wrapper .team-1.team{
-	margin-bottom: 25px;
+	margin-bottom: -150px;
 }
 
 .ourteam_wrapper .team_member{
