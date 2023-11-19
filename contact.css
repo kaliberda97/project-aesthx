@@ -13,7 +13,7 @@ body {
   align-items: center;
   justify-content: space-between; 
   min-height: 100vh;
-  background-image: url(../image/b3.jpg);
+  background-image: url(./image/b3.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
