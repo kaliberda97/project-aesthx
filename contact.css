@@ -133,7 +133,7 @@ header {
 .calendar #dayNumber {
   margin: 0;
   line-height: 0.9em;
-  font-size: 40px;
+  font-size: 46px;
   font-weight: 700;
   color: #3d3d3d;
 }
@@ -155,7 +155,7 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
-  margin: 25px 2px;
+  margin: 39px 2px;
   cursor: pointer;
   border-radius: 4px;
   
