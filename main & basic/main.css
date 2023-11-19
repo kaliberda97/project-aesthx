@@ -1,0 +1,67 @@
+body {
+    font-size: 16px;
+    background-color: #000000;
+    font-family: 'Rajdhani', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 140px;
+    text-align: center;
+    color: #ffffff30;
+    letter-spacing: 60px;
+}
+
+/* ---------------------  h1 kindelemente ----------------------- */
+h1 > span {
+    animation: lighting 2s infinite;
+}
+
+h1 > span:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+h1 > span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+h1 > span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+h1 > span:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+h1 > span:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+h1 > span:nth-child(6) {
+    animation-delay: 0.7s;
+}
+
+h1 > span:nth-child(7) {
+    animation-delay: 0.8s;
+}
+
+
+/* -------------------- @keyf.lighting ----------------*/
+@keyframes lighting {
+    0% {
+        color: rgb(250, 179, 97);
+        text-shadow: 5px 2px 30px rgb(219, 191, 11);
+    }
+    50% {
+        color: #745e3dd3;
+        text-shadow: none;
+    }
+    100% {
+        color: #8d630e0d;
+        text-shadow: none;
+    }
+}

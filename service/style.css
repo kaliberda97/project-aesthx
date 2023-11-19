@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "robotoregular";
+  src: url(../fonts/roboto-regular-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "robotoregular", "Open Sans", sans-serif;
+
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(../image/b3.jpg);
+}
+/* ------------------------------ nav ------------------------------------ */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0 10px;
+}
+
+.navbar {
+  display: flex;
+  padding: 22px 0;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.navbar .hamburger-btn {
+  display: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.navbar .logo {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar .logo img {
+  width: 180px;
+  border-radius: 50%;
+}
+
+.navbar .logo h2 {
+  color: rgb(255, 255, 255);
+  text-shadow: 10px 10px 20px rgb(186, 162, 126);
+  font-weight: 600;
+  font-size: 80px;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar .links a {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.1s ease;
+}
+
+.navbar .links a:hover {
+  color: rgb(247, 177, 1);
+}
+
+.navbar .login-btn {
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.15s ease;
+  text-decoration: none;
+}
+
+.navbar .login-btn:hover {
+  background: rgb(247, 177, 1);
+}
+
+/* ----------------------------- container card ----------------------------- */
+.container {
+  position: relative;
+  width: 1150px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10%;
+  flex-grow: 1;
+}
+
+.container .card {
+  position: relative;
+  width: 300px;
+  height: 420px;
+  background-color: #fff;
+  margin: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease-in-out;
+}
+s
+
+.container:hover .card {
+  filter: blur(20px);
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+
+.container .card:hover {
+  filter: blur(0);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.container .card:hover .circle {
+  clip-path: circle(600px);
+}
+.container .card:hover .circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+} 
+
+.container .card:hover .content p {
+  color: rgb(255, 255, 255);
+  text-shadow:20px 5px 10px rgb(0, 0, 0);
+}
+
+.container .card:hover .content a {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2),
+    -1px -1px 2px rgba(255, 255, 255, 0.4);
+}
+
+.container .card .content a:active {
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.04),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.07),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.4);
+}
+
+.container .card .circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(180px at center 0);
+  text-align: center;
+  transition: 1s ease-in-out;
+}
+/* ------------------------------- text ---------------------- */
+.container .card h2 {
+  color: rgb(3, 102, 148);
+  font-size: 1.3em;
+  padding: 15px;
+  justify-content: center;
+  
+}
+.container .card:hover .content h2 {
+  color: rgb(251, 177, 5); 
+}
+
+.container .card .content {
+  position: absolute;
+  bottom: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container .card .content p {
+  color: #666;
+  transition: 0.5s ease-in-out;
+}
+
+.container .card .content a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #000;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: 0.8s ease-in-out;
+  font-size: 20px;
+}
+/* ------------------------- card child ------------------------------------- */
+.container .card:nth-child(1) .content a {
+  background: #ffaf00;
+}
+.container .card:nth-child(1) .circle {
+  background-image: url(../image/a4.jpeg);
+  background-size: cover;
+  width: 350px; 
+  height: 450px;
+  background-position: 50% 0;
+  
+}
+.container .card:nth-child(2) .content a {
+  background:  #ffaf00;;
+}
+.container .card:nth-child(2) .circle {
+  background-image: url(../image/a5.jpeg);
+  width: 350px; 
+  height: 450px;
+  background-size: cover;
+  background-position: 60% 0;
+  
+}
+
+.container .card:nth-child(3) .content a {
+  background:  #ffaf00;;
+}
+.container .card:nth-child(3) .circle {
+  background-image: url(../image/r18.jpeg);
+  width: 350px; 
+  height: 450px;
+  background-size: cover;
+  background-position: 50% 0;
+}
+
+.container .card:nth-child(4) .content a {
+  background:  #ffaf00;;
+}
+.container .card:nth-child(4) .circle {
+  background-image: url(../image/a7.jpeg);
+  width: 350px; 
+  height: 450px;
+  background-size: cover;
+  background-position: 90% 10;
+}
+
+.container .card:nth-child(5) .content a {
+  background:  #ffaf00;;
+}
+.container .card:nth-child(5) .circle {
+  background-image: url(../image/r19.jpeg);
+  width: 350px; 
+  height: 450px;
+  background-size: cover;
+  background-position: 50% 0;
+}
+
+.container .card:nth-child(6) .content a {
+  background:  #ffaf00;;
+}
+.container .card:nth-child(6) .circle {
+  background-image: url(../image/r20.png);
+  width: 350px; 
+  height: 450px;
+  background-size: cover;
+  background-position: 55% 0;
+}
+
+@keyframes colorChange {
+  0% {
+    color: #fff;
+  }
+
+  50% {
+    color: #b1b493;
+  }
+
+  80% {
+    color: #4f8a8b;
+  }
+
+  100% {
+    color: #fff;
+  }
+}
+
+
+/* ----------------------------------- footer ----------------------------------- */
+footer {
+  background-color: #3d3c3c;
+  padding: 20px 0;
+  text-align: center;
+  color: rgb(196, 191, 191);
+  width: 100%;
+  margin-top: auto;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons i {
+  font-size: 30px;
+  margin: 0 10px;
+  color: rgb(186, 186, 186);
+  transition: color 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.social-icons i:hover {
+  color: #032de4;
+  text-shadow:10px 5px 40px #007bff;
+}
+
+.follow-us {
+  margin-bottom: 10px;
+  font-weight: bold;
+}

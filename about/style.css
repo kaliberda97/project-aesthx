@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+:root {
+  --color: #f3f3e3;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../image/b5.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 1rem;
+  line-height: 1.5;
+  justify-content: space-between; 
+}
+
+
+.main_container{
+	position: relative;
+}
+
+/* ------------------------------------------ nav -------------------------------------------- */
+.navbar {
+  display: flex;
+  padding: 22px 0;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.navbar .hamburger-btn {
+  display: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.navbar .logo {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar .logo img {
+  width: 180px;
+  border-radius: 50%;
+}
+
+.navbar .logo h2 {
+  color: rgb(255, 255, 255);
+  text-shadow: 10px 10px 20px rgb(186, 162, 126);
+  font-weight: 600;
+  font-size: 80px;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar .links a {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.1s ease;
+}
+
+.navbar .links a:hover {
+  color: rgb(247, 177, 1);
+}
+
+.navbar .login-btn {
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.15s ease;
+  text-decoration: none;
+}
+
+.navbar .login-btn:hover {
+  background: rgb(247, 177, 1);
+}
+/* ------------------------------------ media nav -------------------------------------------------------- */
+@media (max-width: 720px){
+	.navbar{
+		height: auto;
+		flex-direction: column;
+	}
+
+	.navbar ul{
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.logo{
+		margin-bottom: 25px;
+	}
+
+	.navbar ul li{
+		margin-bottom: 5px;
+	}
+
+	.banner_content{
+		margin-top: 35px;
+	}
+}
+
+/* -------------------------------------------- banner ------------------------------------------ */
+.banner_image{
+	background: url("https://i.imgur.com/AS8APz9.jpg") no-repeat top center;
+	background-size: cover;
+	width: 100%;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner_content{
+	text-align: center;
+	color: #fff;
+}
+
+.banner_content h1{
+  font-size: 40px;
+	text-transform: uppercase;
+	line-height: 38px;
+	margin-top: 20%;
+ 
+}
+
+.banner_content h1 span{
+	color: #fba822;;
+  font-size: 30px;
+  letter-spacing: 5px;
+  text-transform: lowercase;
+}
+.banner_content h1 span.capitalized {
+  text-transform: capitalize;
+}
+
+/* ------------------------------------------- about us ------------------------------------------- */
+.about,
+.services,
+.contactus,
+.ourteam{
+	padding: 5% 10%;
+	text-align: center;
+	
+  
+}
+p{
+	margin-bottom: 15px;
+	font-size: 20px;
+	line-height: 20px;
+	color: #a9a9a9;
+    font-family: "Open Sans", sans-serif;
+}
+h1.title{
+	margin-bottom: 20px;
+	color: #aea0a0;
+	font-family: "Open Sans", sans-serif;
+	text-transform: uppercase;
+	font-size: 48px;
+	word-spacing: 10px;
+	letter-spacing: 5px;
+
+}
+
+.btn a{
+	display: block;
+	width: 180px;
+	height: 35px;
+	border: 2px solid #f8b930;
+  	border-radius: 20px;
+  	background-color: #f8b930;
+	line-height: 35px;
+	margin: 25px auto 0;
+	color: #000000;
+	text-align: center;
+  	text-decoration: none;
+  	font-size: 20px;
+}
+/* -------------------------------------------- service ------------------------------------------ */
+.services{
+	background: #f5f5f5;
+}
+
+.diff_services{
+	display: flex;
+	margin-top: 35px;
+	justify-content: space-between;
+}
+
+.diff_service_item{
+	width: 30%;
+}
+
+.diff_service_item img{
+	width: 100%;
+ 	height: 75%;
+	margin-bottom: 25px;
+}
+
+.diff_service_item h3{
+	color: #fba822;
+	margin-bottom: 15px;
+}
+
+/* ------------------------------------------- contact us ------------------------------------------- */
+.form_input{
+	margin-bottom: 15px;
+	
+}
+
+.form_input input[type="text"]{
+	width: 250px;
+	padding: 12px 20px;
+	border: 1px solid #ccc;
+  	border-radius: 20px;
+	
+}
+
+.form_input textarea{
+	width: 250px;
+	padding: 12px 20px;
+	height: 80px;
+	resize: none;
+	border: 1px solid rgb(73, 73, 73);
+  	border-radius: 20px;
+}
+
+.contactus {
+	background-color: #212020;
+}
+
+/* --------------------------------------------- team ----------------------------------------- */
+.ourteam{
+	background: #f5f5f5;
+}
+
+.ourteam_wrapper .team{
+	display: flex;
+	justify-content: space-between;
+}
+
+.ourteam_wrapper .team-1.team{
+	margin-bottom: 25px;
+}
+
+.ourteam_wrapper .team_member{
+	width: 30%;
+	height: auto;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.ourteam_wrapper .team_member img{
+	width: 100%;
+  	height: 80%;
+  	object-fit: cover;
+	display: block;
+	transition: all 0.5s ease;
+	
+  
+}
+
+.ourteam_wrapper .team_member:hover img{
+	transform: scale(1.1);
+
+}
+
+/* ----------------------------------- footer ----------------------------------- */
+footer {
+	background-color: #3d3c3c;
+	padding: 20px 0;
+	text-align: center;
+	color: rgb(221, 217, 217);
+	width: 100%;
+	margin-top: auto;
+	
+  }
+  
+  .social-icons {
+	margin-top: 10px;
+  }
+  
+  .social-icons i {
+	font-size: 30px;
+	margin: 0 10px;
+	color: rgb(197, 197, 197);
+	transition: color 0.3s ease-in-out;
+	margin-bottom: 20px;
+  }
+  
+  .social-icons i:hover {
+	color: #032de4;
+	text-shadow:10px 5px 40px #007bff;
+  }
+  
+  .follow-us {
+	margin-bottom: 10px;
+	font-weight: bold;
+  }
+
+
+
+
+

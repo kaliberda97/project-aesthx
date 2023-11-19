@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.9/dist/flatpickr.min.css">
+    <title>Contact</title>
+</head>
+<!------------------------------------------- nav ---------------------------------->
+<header>
+    <nav class="navbar">
+       <span class="hamburger-btn material-symbols-rounded">menu</span>
+       <a href="../main & basic/basic.html" class="logo">
+          <h2>AesthX</h2>
+       </a>
+ 
+       <!------------------------------------------- nav ---------------------------------->
+       <ul class="links">
+ 
+        <li><a href="../main & basic/main.html">Home</a></li>
+        <li><a href="../about/index.html">About us</a></li>
+        <li><a href="../service/index.html">Services</a></li>
+        <li><a href="../contact/index.html">Contact us</a></li>
+       </ul>
+       <a href="../signin/signin.html" class="login-btn">LOG IN</a>
+    </nav>
+ </header>
+<body>
+    <!------------------------- calender ---------------------------------------->
+    <div class="calendar">
+        <p id="monthName"></p>
+        <p id="dayName"></p>
+        <p id="dayNumber"></p>
+        <p id="year"></p>
+        <button onclick="changeLanguage('en-US')">English</button>
+        <button onclick="changeLanguage('de-DE')">Deutsch</button>
+    </div>
+
+    <div class="form-container">
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <label for="appointmentType">Choose an option:</label>
+            <select id="appointmentType" name="appointmentType">
+                <option value="message">Write a message</option>
+                <option value="consultation">Book a consultation</option>
+            </select>
+
+            <div id="dateTimeContainer" style="display:none;">
+                <label for="dateTime">Choose date and time:</label>
+                <input type="text" id="dateTime" name="dateTime" readonly>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+ <!-------------------------- calender js  ----------------------------------->
+    
+    <script src="https://kit.fontawesome.com/535901ddfb.js" crossorigin="anonymous"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.9/dist/flatpickr.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script defer src="script.js"></script>
+    <script defer>
+        let lang = 'en-US';
+        let appointmentType = document.getElementById('appointmentType');
+        let dateTimeContainer = document.getElementById('dateTimeContainer');
+        let dateTimeInput = document.getElementById('dateTime');
+
+        updateCalendar();
+
+        function updateCalendar() {
+            let date = new Date();
+            let dayNumber = date.getDate();
+            let dayName = date.toLocaleString(lang, {
+                weekday: 'long'
+            });
+            let monthName = date.toLocaleString(lang, {
+                month: 'long'
+            });
+            let year = date.getFullYear();
+
+            document.getElementById('monthName').innerHTML = monthName;
+            document.getElementById('dayName').innerHTML = dayName;
+            document.getElementById('dayNumber').innerHTML = dayNumber;
+            document.getElementById('year').innerHTML = year;
+        }
+
+        function changeLanguage(newLang) {
+            lang = newLang;
+            updateCalendar();
+
+            if (appointmentType.value === 'consultation') {
+                initializeDateTimePicker();
+            } else {
+                hideDateTimePicker();
+            }
+        }
+
+        function initializeDateTimePicker() {
+            dateTimeContainer.style.display = 'block';
+            flatpickr(dateTimeInput, {
+                enableTime: true,
+                minDate: 'today',
+                dateFormat: 'm/d/Y H:i',
+            });
+        }
+
+        function hideDateTimePicker() {
+            dateTimeContainer.style.display = 'none';
+        }
+
+        appointmentType.addEventListener('change', function() {
+            if (this.value === 'consultation') {
+                initializeDateTimePicker();
+            } else {
+                hideDateTimePicker();
+            }
+        });
+    </script>
+
+    <!---------------------------------------- footer ---------------------------------------->
+ <footer>
+    <div class="follow-us">Follow Us</div>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/viktoriia-kaliberda-700b5a283/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.google.com/" target="_blank"><i class="fab fa-google"></i></a>
+    </div>
+    <div>
+      &copy; 2023 Copyright. Berlin | All Rights Reserved
+    </div>
+  </footer>
+  
+</body>
+</html>
