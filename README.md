@@ -2,6 +2,7 @@
 https://kaliberda97.github.io/project-aesthx/main
 
 This project is the work of Viktoriia Kaliberda and was created as a test site for the AesthX clinic as part of the DCI study program. :seedling:
+The project was created in November 2023. :date:
 
 The project consists of 6 parts and its components.
 
